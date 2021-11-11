@@ -1,5 +1,8 @@
 package com.example.android.guesstheword.screens.game
 
+import android.util.Log
+import androidx.lifecycle.ViewModel
+
 class GameViewModel : ViewModel() {
 
 
@@ -41,21 +44,17 @@ class GameViewModel : ViewModel() {
     }
 
     init {
+        Log.i("GameViewModel", "GameViewModel created!")
         resetList()
         nextWord()
-        Log.i("GameViewModel", "GameViewModel created!")
     }
-    /**
-     * Moves to the next word in the list
-     */
-    private fun nextWord() {
-        if (!wordList.isEmpty()) {
-            //Select and remove a word from the list
-            word = wordList.removeAt(0)
-        }
-        updateWordText()
-        updateScoreText()
+
+    override fun onCleared() {
+        super.onCleared()
+        Log.i("GameViewModel", "GameViewModel destroyed!")
     }
+
+
     /** Methods for buttons presses **/
     fun onSkip() {
         score--
@@ -67,8 +66,13 @@ class GameViewModel : ViewModel() {
         nextWord()
     }
 
-    override fun onCleared() {
-        super.onCleared()
-        Log.i("GameViewModel", "GameViewModel destroyed!")
+    private fun nextWord() {
+        if (!wordList.isEmpty()) {
+            //Select and remove a word from the list
+            word = wordList.removeAt(0)
+        }
+
     }
+
+
 }
