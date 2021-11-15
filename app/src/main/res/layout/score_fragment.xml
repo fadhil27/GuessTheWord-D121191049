@@ -26,14 +26,10 @@
 
         <TextView
             android:id="@+id/you_scored_text"
+            style="@style/style2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:fontFamily="sans-serif"
             android:text="@string/you_scored"
-            android:textColor="@color/black_text_color"
-            android:textSize="14sp"
-            android:textStyle="normal"
             app:layout_constraintBottom_toTopOf="@+id/score_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -44,14 +40,10 @@
 
         <TextView
             android:id="@+id/score_text"
+            style="@style/style1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:fontFamily="sans-serif"
-            android:textColor="@color/black_text_color"
-            android:textSize="34sp"
-            android:textStyle="normal"
-            android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/last_tv"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -62,7 +54,7 @@
 
         <TextView
             android:id="@+id/last_tv"
-            style="@style/textTitle2"
+            style="@style/style2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/last_word_text"
@@ -72,7 +64,7 @@
 
         <TextView
             android:id="@+id/lastWord_tv"
-            style="@style/textTitle"
+            style="@style/style1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="252dp"

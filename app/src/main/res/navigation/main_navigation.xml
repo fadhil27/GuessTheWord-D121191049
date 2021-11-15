@@ -32,7 +32,16 @@
             app:launchSingleTop="true"
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/profile"
+            app:destination="@id/ProfileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
     </fragment>
+
     <fragment
         android:id="@+id/game_destination"
         android:name="com.example.android.guesstheword.screens.game.GameFragment"
@@ -67,7 +76,12 @@
             app:argType="integer" />
         <argument
             android:name="lastWord"
-            android:defaultValue="tes"
+            android:defaultValue="word"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/ProfileFragment"
+        android:name="com.example.android.guesstheword.ProfilFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/profil_fragment" />
 </navigation>

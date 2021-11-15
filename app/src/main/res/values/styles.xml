@@ -47,23 +47,23 @@
         <item name="colorControlHighlight">@color/skip_red_color</item>
     </style>
 
-    <style name="textTitle">
+    <style name="style1">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">16dp</item>
-        <item name="android:fontFamily">sans-serif</item>
-        <item name="android:textColor">@color/black_text_color</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textSize">34sp</item>
         <item name="android:textStyle">normal</item>
     </style>
 
-    <style name="textTitle2">
+    <style name="style2">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:layout_marginBottom">8dp</item>
-        <item name="android:fontFamily">sans-serif</item>
-        <item name="android:textColor">@color/black_text_color</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">normal</item>
     </style>
