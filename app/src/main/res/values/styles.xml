@@ -30,12 +30,42 @@
         <item name="colorControlHighlight">@color/selected_green_color</item>
         <item name="android:textColor">@color/white_text_color</item>
         <item name="colorAccent">@color/selected_green_color</item>
+        <item name="android:radius">@dimen/cardview_default_radius</item>
+    </style>
+
+    <style name="ProfilBtn" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">#2196F3</item>
+        <item name="colorControlHighlight">#00BCD4</item>
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="colorAccent">#03A9F4</item>
+
     </style>
 
     <style name="SkipButton" parent="Widget.AppCompat.Button.Colored">
         <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
         <item name="android:textColor">@color/grey_button_color</item>
         <item name="colorControlHighlight">@color/skip_red_color</item>
+    </style>
+
+    <style name="textTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/black_text_color</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="textTitle2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/black_text_color</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
     </style>
 
 </resources>

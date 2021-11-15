@@ -1,3 +1,4 @@
+
 package com.example.android.guesstheword.screens.game
 
 import android.os.Bundle
@@ -9,6 +10,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.android.guesstheword.R
 import com.example.android.guesstheword.databinding.GameFragmentBinding
@@ -18,9 +20,9 @@ import com.example.android.guesstheword.databinding.GameFragmentBinding
  */
 class GameFragment : Fragment() {
 
-    private lateinit var binding: GameFragmentBinding
-
     private lateinit var viewModel: GameViewModel
+
+    private lateinit var binding: GameFragmentBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -32,54 +34,59 @@ class GameFragment : Fragment() {
             container,
             false
         )
-        Log.i("GameFragment", "Called ViewModelProvider.get")
 
-        // Get the viewModel
+        Log.i("GameFragment", "Called ViewModelProvider.get")
         viewModel = ViewModelProvider(this).get(GameViewModel::class.java)
 
-        binding.correctButton.setOnClickListener { onCorrect() }
-        binding.skipButton.setOnClickListener { onSkip() }
-        binding.endGameButton.setOnClickListener { onEndGame() }
+        binding.apply {
+            correctButton.setOnClickListener { onCorrect() }
+            skipButton.setOnClickListener { onSkip() }
+            endGameButton.setOnClickListener { onEndGame() }
+        }
+
+
         updateScoreText()
         updateWordText()
         return binding.root
+
     }
 
-    /** Methods for buttons presses **/
+    private fun gameFinished() {
+        Toast.makeText(activity, "Game has just finished!", Toast.LENGTH_SHORT).show()
 
-    private fun onSkip() {
-        viewModel.onSkip()
-        updateWordText()
-        updateScoreText()
-    }
-    private fun onCorrect() {
-        viewModel.onCorrect()
-        updateScoreText()
-        updateWordText()
+        val action = GameFragmentDirections.actionGameToScore()
+
+        action.score = viewModel.score
+        action.lastWord = viewModel.word
+        NavHostFragment.findNavController(this).navigate(action)
     }
 
     private fun onEndGame() {
         gameFinished()
     }
 
+    /** Methods for buttons presses **/
+
+    private fun onSkip() {
+        viewModel.onSkip()
+        updateScoreText()
+        updateWordText()
+    }
+
+    private fun onCorrect() {
+        viewModel.onCorrect()
+        updateScoreText()
+        updateWordText()
+    }
+
+
     /** Methods for updating the UI **/
 
     private fun updateWordText() {
         binding.wordText.text = viewModel.word
-
     }
 
     private fun updateScoreText() {
         binding.scoreText.text = viewModel.score.toString()
-    }
-
-    /**
-     * Called when the game is finished
-     */
-    private fun gameFinished() {
-        Toast.makeText(activity, "Game has just finished", Toast.LENGTH_SHORT).show()
-        val action = GameFragmentDirections.actionGameToScore()
-        action.score = viewModel.score
-        NavHostFragment.findNavController(this).navigate(action)
     }
 }

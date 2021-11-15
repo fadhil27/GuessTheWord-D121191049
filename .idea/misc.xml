@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/ACTIVITY/AKADEMIK/SEM 5/5. PEMROGRAMAN MOBILE/TUGAS/6/GuessTheWord-D121191049/app/src/main/res/layout/game_fragment.xml" value="0.17760416666666667" />
+        <entry key="..\:/ACTIVITY/AKADEMIK/SEM 5/5. PEMROGRAMAN MOBILE/TUGAS/6/GuessTheWord-D121191049/app/src/main/res/drawable/ic_baseline_supervised_user_circle_24.xml" value="0.178125" />
+        <entry key="..\:/ACTIVITY/AKADEMIK/SEM 5/5. PEMROGRAMAN MOBILE/TUGAS/6/GuessTheWord-D121191049/app/src/main/res/drawable/ic_launcher_background.xml" value="0.178125" />
+        <entry key="..\:/ACTIVITY/AKADEMIK/SEM 5/5. PEMROGRAMAN MOBILE/TUGAS/6/GuessTheWord-D121191049/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.178125" />
+        <entry key="..\:/ACTIVITY/AKADEMIK/SEM 5/5. PEMROGRAMAN MOBILE/TUGAS/6/GuessTheWord-D121191049/app/src/main/res/layout/game_fragment.xml" value="0.22" />
         <entry key="..\:/ACTIVITY/AKADEMIK/SEM 5/5. PEMROGRAMAN MOBILE/TUGAS/6/GuessTheWord-D121191049/app/src/main/res/layout/main_activity.xml" value="0.17760416666666667" />
-        <entry key="..\:/ACTIVITY/AKADEMIK/SEM 5/5. PEMROGRAMAN MOBILE/TUGAS/6/GuessTheWord-D121191049/app/src/main/res/layout/score_fragment.xml" value="0.17760416666666667" />
-        <entry key="..\:/ACTIVITY/AKADEMIK/SEM 5/5. PEMROGRAMAN MOBILE/TUGAS/6/GuessTheWord-D121191049/app/src/main/res/layout/title_fragment.xml" value="0.17760416666666667" />
+        <entry key="..\:/ACTIVITY/AKADEMIK/SEM 5/5. PEMROGRAMAN MOBILE/TUGAS/6/GuessTheWord-D121191049/app/src/main/res/layout/score_fragment.xml" value="0.22" />
+        <entry key="..\:/ACTIVITY/AKADEMIK/SEM 5/5. PEMROGRAMAN MOBILE/TUGAS/6/GuessTheWord-D121191049/app/src/main/res/layout/title_fragment.xml" value="0.25" />
       </map>
     </option>
   </component>

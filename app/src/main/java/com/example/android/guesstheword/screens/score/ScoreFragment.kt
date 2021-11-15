@@ -31,28 +31,36 @@ import com.example.android.guesstheword.databinding.ScoreFragmentBinding
  * Fragment where the final score is shown, after the game is over
  */
 class ScoreFragment : Fragment() {
+
     private lateinit var viewModel: ScoreViewModel
     private lateinit var viewModelFactory: ScoreViewModelFactory
 
-
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
 
         // Inflate view and obtain an instance of the binding class.
         val binding: ScoreFragmentBinding = DataBindingUtil.inflate(
-                inflater,
-                R.layout.score_fragment,
-                container,
-                false
+            inflater,
+            R.layout.score_fragment,
+            container,
+            false
         )
-        viewModelFactory = ScoreViewModelFactory(ScoreFragmentArgs.fromBundle(arguments!!).score)
-        viewModel = ViewModelProvider(this, viewModelFactory)
-            .get(ScoreViewModel::class.java)
+        val args = ScoreFragmentArgs.fromBundle(requireArguments())
+        val finalScore = args.score
+        val lastWord = args.lastWord
 
-        binding.scoreText.text = viewModel.score.toString()
+
+        viewModelFactory = ScoreViewModelFactory(finalScore,lastWord)
+
+        viewModel = ViewModelProvider(this, viewModelFactory).get(ScoreViewModel::class.java)
+        binding.apply {
+            scoreText.text = viewModel.score.toString()
+            lastWordTv.text = viewModel.word.toString()
+        }
+
 
 
         return binding.root
